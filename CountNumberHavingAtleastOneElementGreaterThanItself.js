@@ -11,10 +11,6 @@ function count(arr) {
       max = arr[i];
     }
   }
-  console.log("max", max);
-
-  console.log("count ", count);
-  console.log("totalLength ", totalLength);
   console.log("The total count = ", totalLength - count);
 }
 

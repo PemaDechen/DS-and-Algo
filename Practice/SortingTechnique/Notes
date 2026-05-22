@@ -1,0 +1,8 @@
+# "Compare neighbors, swap if wrong, biggest bubbles to end, repeat with shorter array."
+
+# How to remember Selection Sort forever —
+"Find the minimum, place it at front, repeat for remaining."
+Difference from Bubble Sort —
+
+Bubble Sort → many swaps per pass, neighbors only
+Selection Sort → one swap per pass, finds minimum first

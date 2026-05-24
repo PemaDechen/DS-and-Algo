@@ -1,28 +1,25 @@
 const checkAnagram = (str1, str2) => {
+  if (str1.length !== str2.length) {
+    return false;
+  }
 
-    // // Sorted Manner
-    // const firstString= str1.toLowerCase().split('').sort().join('');
-    // const secondString= str2.toLowerCase().split('').sort().join('');
+  const charCount = {};
+  for (let char of str1) {
+    charCount[char] = (charCount[char] || 0) + 1;
+  }
 
-    // return firstString === secondString;
-
-    // Brute Force
-    if (str1.length !== str2.length) {
-        return false;
+  for (let char of str2) {
+    if (!charCount[char]) {
+      return false;
     }
 
-    const charCount = {};
-
-    for (let char of str1.toLowerCase()) {
-        charCount[char] = (charCount[char] || 0) + 1;
+    if (charCount[char]) {
+      charCount[char]--;
     }
+  }
 
-    for (let char of str2.toLowerCase()) {
-        if (!charCount[char]) {
-            return false;
-        }
-        charCount[char]--;
-    }
+  return true;
+};
 
-    return true;
-}
+console.log(checkAnagram("listen", "silent")); // true
+console.log(checkAnagram("hello", "world")); // false

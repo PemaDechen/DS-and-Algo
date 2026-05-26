@@ -7,8 +7,6 @@ const checkTwoSumEqualsZero = (nums)=>{
         
         obj[nums[i]] = true;
     }
-    console.log('This is obj, obj', obj)
-    console.log('this is -obj[nums[i]]', -obj[nums[0]])
 
     return false;
 }

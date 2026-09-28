@@ -1,0 +1,33 @@
+/*
+Blind 75 — Top K Frequent Elements (LeetCode 347)
+
+Given an integer array nums and an integer k, return the k most frequent elements.
+You may return the answer in any order.
+
+Example:
+  nums = [1,1,1,2,2,3], k = 2  →  [1, 2]
+
+Approach (Idea B — sort by count):
+  1. Count how many times each number appears (use a Map)
+  2. Turn the Map into an array of [num, count] pairs
+  3. Sort the pairs by count, high → low
+  4. Take the first k numbers
+*/
+
+const topKFrequent = (nums, k) => {
+  // Step 1: count frequencies
+
+
+  // Step 2: Map → array of [num, count] pairs
+
+
+  // Step 3: sort by count (high → low)
+
+
+  // Step 4: take the first k numbers and return them
+
+};
+
+console.log(topKFrequent([1, 1, 1, 2, 2, 3], 2)); // [1, 2]
+console.log(topKFrequent([1], 1)); // [1]
+console.log(topKFrequent([4, 4, -1, -1, -1, 7], 1)); // [-1]

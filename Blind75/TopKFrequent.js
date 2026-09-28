@@ -23,9 +23,21 @@ const topKFrequent = (nums, k) => {
 
   // Step 2: Map → array of [num, count] pairs
 
+  const newArr = [...freq];
+  // console.log(newArr)
+
   // Step 3: sort by count (high → low)
 
+  newArr.sort((a, b) => b[1] - a[1]);
+  // return newArr;
+
   // Step 4: take the first k numbers and return them
+  let finalRes = [];
+  for (let i = 0; i < k; i++) {
+    finalRes.push(newArr[i][0]);
+  }
+
+  return finalRes.length > 0 ? finalRes : -1;
 };
 
 console.log(topKFrequent([1, 1, 1, 2, 2, 3], 2)); // [1, 2]

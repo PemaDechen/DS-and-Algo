@@ -16,16 +16,20 @@ Approach (Idea B — sort by count):
 
 const topKFrequent = (nums, k) => {
   // Step 1: count frequencies
-
+  const freq = new Map();
+  for (let i = 0; i < nums.length; i++) {
+    if (freq.has(nums[i])) {
+      freq.set(nums[i], freq.get(nums[i]) + 1);
+    } else {
+      freq.set(nums[i], 1);
+    }
+  }
 
   // Step 2: Map → array of [num, count] pairs
 
-
   // Step 3: sort by count (high → low)
 
-
   // Step 4: take the first k numbers and return them
-
 };
 
 console.log(topKFrequent([1, 1, 1, 2, 2, 3], 2)); // [1, 2]

@@ -14,25 +14,24 @@ Output: [0,1]
 Explanation: nums[0] + nums[1] == 7, so we return [0, 1].
  */
 
-function twoSum(n, target) {
+function twoSum(nums, target) {
   //  3 things I can use is map, set or array right but the things is to check we if it exists we use set(boolean), count use map
   // use set?
 
   const exist = new Map();
-  const numberNeeded = exist.set(target - n[0], 0);
 
-  for (let i = 1; i < n.length; i++) {
+  for (let i = 0; i < nums.length; i++) {
     // check if the number exists
-    if (exist.has(n[i])) {
-      return [exist.get(n[i]), i];
+    if (exist.has(nums[i])) {
+      return [exist.get(nums[i]), i];
     }
-    const newNumberNeeded = target - n[i];
+    const newNumberNeeded = target - nums[i];
 
     exist.set(newNumberNeeded, i);
   }
 
-  return -1;
+  return [];
 }
 
-console.log(twoSum((nums = [4, 5, 6]), (target = 10)));
-console.log(twoSum(nums = [5,5], target = 10))
+console.log(twoSum([4, 5, 6], 10));
+console.log(twoSum([5, 5], 10));

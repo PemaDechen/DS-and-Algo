@@ -32,12 +32,7 @@ const topKFrequent = (nums, k) => {
   // return newArr;
 
   // Step 4: take the first k numbers and return them
-  let finalRes = [];
-  for (let i = 0; i < k; i++) {
-    finalRes.push(newArr[i][0]);
-  }
-
-  return finalRes.length > 0 ? finalRes : -1;
+  return newArr.slice(0, k).map((pair) => pair[0]); // I like this syntax.
 };
 
 console.log(topKFrequent([1, 1, 1, 2, 2, 3], 2)); // [1, 2]
